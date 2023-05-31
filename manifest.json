@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "filter changer",
+  "version": "1.0",
+  "description": "更改当前页面的色调",
+  "permissions": ["tabs"],
+  // "browser_action": {
+  //   "default_title": "更改滤镜",
+  //   "default_popup": "popup.html",
+  //   "default_icon": "icon.png"
+  // },
+
+  // V3
+  "action" :{
+    "default_title": "更换主题",
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}
