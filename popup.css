@@ -4,9 +4,12 @@ body {
 }
 
 #container {
+  position: relative;
   min-width: 300px;
   min-height: 400px;
-  position: relative;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 22px;
 }
 
 h1 {
@@ -16,10 +19,98 @@ h1 {
   color: #333;
 }
 
+span {
+  padding-right: 17px;
+  line-height: 30px;
+  vertical-align: top;
+}
+
+select {
+  width: 120px;
+  height: 30px;
+  color: rgb(61, 105, 199);
+  border: rgb(99, 138, 223) 1px solid;
+  border-radius: 10px;
+}
+
+select:focus {
+  width: 120px;
+  height: 30px;
+  color: rgb(61, 105, 199);
+  border: rgb(99, 138, 223) 1px solid;
+  border-radius: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  background: #66acec;
+  border: none;
+  border-radius: 25px;
+}
+
+#container input {
+  -webkit-appearance: none; /* 去除默认样式 */
+  width: 50px;
+  height: 24px;
+}
+
+.slide {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 25px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slide:before {
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  bottom: 4px;
+  content: "";
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#container input:checked + .slide {
+  background-color: #2196f3;
+}
+
+#container input:focus + .slide {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+#container input:checked + .slide:before {
+  -webkit-transform: translateX(21px);
+  -ms-transform: translateX(21px);
+  transform: translateX(21px);
+}
+
+/* Rounded sliders */
+.slide .round {
+  border-radius: 34px;
+}
+
+.slide .round:before {
+  border-radius: 50%;
+}
+
 button {
   display: block;
   margin: 0 auto;
-  margin-top: 300px;
+  margin-top: 80px;
   padding: 10px 20px;
   width: 116px;
   height: 36px;
